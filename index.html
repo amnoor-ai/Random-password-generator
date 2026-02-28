@@ -8,21 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="password-container">
-        <h2>Random Password Generator</h2>
-        <div class="input-container">
-            <input 
-            type="text"
-             id="input" 
-             class="input"
-            placeholder="create password"
-             readonly/>
-        <i class="fa-regular fa-copy fa-2x"></i>    
+    <main>
+        <div class="password-container">
+            <h2>Random Password Generator</h2>
+            <p class="description">Generate a secure random password and copy it to your clipboard.</p>
+            <div class="input-container">
+                <label for="input" class="sr-only">Generated password</label>
+                <input 
+                    type="text"
+                    id="input" 
+                    class="input"
+                    placeholder="Click Generate to create a password"
+                    readonly
+                />
+                <i class="fa-regular fa-copy fa-2x" aria-hidden="true"></i>    
+            </div>
+            <button class="btn" type="button">Generate</button>
         </div>
-        <button class="btn">Generate</button>
-    </div>
-    <div class="alertContainer">Password copied 
-    </div>
-  <script src="script.js"></script>
+        <div class="alertContainer">Password copied</div>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>

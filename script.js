@@ -18,8 +18,8 @@ function createPassword(){
     for (let index = 0;  index < passwordLength; index++) {
         const randomNum = Math.floor(Math.random() * chars.length)
         password += chars.substring(randomNum, randomNum + 1);
-    }    inputEl.value = password;
-
+    }
+    inputEl.value = password;
 }
 
 function copyPassword() {
@@ -36,5 +36,11 @@ function copyPassword() {
         }).catch(err => {
             console.error("Failed to copy: ", err);
         });
+    } else {
+        alertContainerEl.innerText = "Generate a password first.";
+        alertContainerEl.classList.add("active");
+        setTimeout(() => {
+            alertContainerEl.classList.remove("active");
+        }, 2000);
     }
 }
